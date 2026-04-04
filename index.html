@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MirchiHut | Premium Desi Fast Food</title>
+    <!-- Google Fonts: Poppins & Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome 6 (Free Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Static Header -->
+    <header id="mainHeader">
+        <div class="header-container">
+            <a href="#" id="logoLink" class="logo-link">
+                <div class="logo-icon">
+                    <i class="fas fa-pepper-hot"></i>
+                </div>
+                <span class="logo-text">Mirchi<span class="logo-highlight">Hut</span></span>
+            </a>
+
+            <div class="header-actions">
+                <div class="contact-numbers desktop-only">
+                    <a href="tel:0300-1234567" class="contact-link"><i class="fas fa-phone-alt"></i> 0300-1234567</a>
+                    <a href="tel:0311-7654321" class="contact-link"><i class="fab fa-whatsapp"></i> 0311-7654321</a>
+                </div>
+                <button id="cartOpenBtn" class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-text desktop-only">Cart</span>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </button>
+                <button id="hamburgerBtn" class="hamburger-btn mobile-only"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer (hidden by default, shown via JS) -->
+    <div id="mobileDrawer" class="mobile-drawer" style="display: none;">
+        <div class="drawer-overlay"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <span class="drawer-logo"><i class="fas fa-pepper-hot"></i> MirchiHut</span>
+                <button id="closeMobileNav" class="close-drawer-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="mobileNavLinks" class="drawer-links"></div>
+            <div class="drawer-footer">
+                <a href="tel:0300-1234567" class="drawer-contact"><i class="fas fa-phone-alt"></i> 0300-1234567</a>
+                <a href="tel:0311-7654321" class="drawer-contact"><i class="fab fa-whatsapp"></i> 0311-7654321</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Static Hero Section -->
+    <section id="heroSection" class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-fire"></i> FRESH · SPICY · AUTHENTIC</div>
+            <h1 class="hero-title">Real Desi Taste.<br /><span class="hero-highlight">Delivered Hot.</span></h1>
+            <p class="hero-subtitle">Spice is the Real Taste — browse our menu, then call to place your order. We
+                deliver across the city!</p>
+            <div class="hero-buttons">
+                <button id="heroMenuBtn" class="btn-primary"><i class="fas fa-utensils"></i> View Menu</button>
+                <a href="tel:0300-1234567" class="btn-secondary"><i class="fas fa-phone-alt"></i> Call to Order</a>
+            </div>
+            <div class="hero-stats">
+                <div><span class="stat-value">50+</span><span class="stat-label">Menu Items</span></div>
+                <div><span class="stat-value">⭐ 4.8</span><span class="stat-label">Rating</span></div>
+                <div><span class="stat-value">30 min</span><span class="stat-label">Delivery</span></div>
+                <div><span class="stat-value">10KM</span><span class="stat-label">Coverage</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Static Search Bar -->
+    <div class="search-section">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search pizzas, burgers, karahi..." class="search-input">
+            <button id="clearSearch" class="clear-search-btn" style="display: none;"><i
+                    class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Static Category Filter Bar -->
+    <div class="category-bar">
+        <button class="category-scroll-btn left" id="categoryScrollLeft" aria-label="Scroll left">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div id="categoryFilters" class="category-filters no-scrollbar"></div>
+        <button class="category-scroll-btn right" id="categoryScrollRight" aria-label="Scroll right">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Dynamic Menu Container (populated by JS) -->
+    <main id="menuContainer" class="menu-container">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-pulse"></i> Loading menu...</div>
+    </main>
+
+    <!-- Static Footer -->
+    <!-- Enhanced Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Brand & Motto Column -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <span class="logo-text">Mirchi<span class="logo-highlight">Hut</span></span>
+                    </div>
+                    <p class="footer-motto">"Spice is the Real Taste — Bringing authentic desi flavors to your doorstep
+                        since 2020."</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Shop Location Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title"><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                    <div class="footer-address">
+                        <p><i class="fas fa-store"></i> MirchiHut Restaurant</p>
+                        <p><i class="fas fa-location-dot"></i> 123 Food Street, Gulberg III</p>
+                        <p><i class="fas fa-city"></i> Lahore, Punjab 54000</p>
+                        <p><i class="fas fa-clock"></i> Open Daily: 12:00 PM - 1:00 AM</p>
+                    </div>
+                    <div class="footer-map">
+                        <a href="#" class="map-link"><i class="fas fa-directions"></i> Get Directions</a>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title"><i class="fas fa-credit-card"></i> Payment Options</h3>
+                    <div class="payment-methods">
+                        <div class="payment-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <strong>Online Payments</strong>
+                                <span>JazzCash • EasyPaisa • Bank Transfer</span>
+                            </div>
+                        </div>
+                        <div class="payment-item">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Cash on Delivery</strong>
+                                <span>Pay when you receive</span>
+                            </div>
+                        </div>
+                        <div class="payment-item">
+                            <i class="fas fa-credit-card"></i>
+                            <div>
+                                <strong>Card Payment</strong>
+                                <span>Visa / Mastercard accepted</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links & Contact Column -->
+                <!-- <div class="footer-column">
+                    <h3 class="footer-title"><i class="fas fa-link"></i> Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#heroSection"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#" id="footerMenuLink"><i class="fas fa-utensils"></i> Our Menu</a></li>
+                        <li><a href="#"><i class="fas fa-tag"></i> Offers & Deals</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="qr-codes">
+                <div class="qr-item">
+                    <i class="fab fa-jazzcash"></i>
+                    <span>JazzCash: 0300-1234567</span>
+                </div>
+                <div class="qr-item">
+                    <i class="fab fa-easypaisa"></i>
+                    <span>EasyPaisa: 0311-7654321</span>
+                </div>
+            </div>
+
+            <!-- Contact Bar -->
+            <div class="footer-contact-bar">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:0300-1234567">0300-1234567</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/923001234567">WhatsApp Order</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@mirchihut.com">info@mirchihut.com</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 MirchiHut · All rights reserved · Designed with <i class="fas fa-heart"
+                        style="color: #ff6b00;"></i> for desi food lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar (hidden by default) -->
+    <div id="cartSidebar" class="cart-sidebar" style="display: none;">
+        <div class="cart-overlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+                <button id="closeCartBtn" class="close-drawer-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="cartItemsList" class="cart-items-list"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">Rs. 0</span>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form" id="checkoutForm" style="display: none;">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="customerName" placeholder="Enter your full name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                        <textarea id="customerAddress" placeholder="Enter your complete delivery address"
+                            class="form-textarea" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Special Instructions (Optional)</label>
+                        <textarea id="specialInstructions" placeholder="Any special requests?" class="form-textarea"
+                            rows="2"></textarea>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="placeOrderBtn" class="btn-place-order" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Place Order
+                    </button>
+                    <a href="tel:0300-1234567" class="btn-call">
+                        <i class="fas fa-phone-alt"></i> Call to Order
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" style="display: none;"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="product-modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close-btn" id="closeModalBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content will be injected here -->
+            </div>
+        </div>
+    </div>
+    <!-- Order Confirmation Modal -->
+    <div id="orderConfirmModal" class="order-confirm-modal" style="display: none;">
+        <div class="order-confirm-overlay"></div>
+        <div class="order-confirm-container">
+            <button class="order-confirm-close" id="closeOrderConfirmBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="order-confirm-content" id="orderConfirmContent">
+                <!-- Dynamic order slip will be injected here -->
+            </div>
+            <div class="order-confirm-actions">
+                <button class="btn-cancel-order" id="cancelOrderBtn">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button class="btn-confirm-order" id="confirmOrderBtn">
+                    <i class="fab fa-whatsapp"></i> Confirm & Send to WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="product.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
