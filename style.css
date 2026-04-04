@@ -3075,6 +3075,10 @@ a {
         font-size: 12px;
     }
 
+    .modal-quantity-label {
+        display: none;
+    }
+
     /* Toast */
     .custom-toast {
         bottom: 16px;
