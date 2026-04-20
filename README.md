@@ -325,21 +325,11 @@ I built a **static and functional, WhatsApp-integrated website** that completely
 | Expense | Cost (PKR) | Cost (USD) |
 | ------- | ---------- | ---------- |
 | GitHub Pages Hosting | ₨0 | $0 |
-| Domain Renewal | ₨1,500 | $5 |
-| **Monthly Total** | **₨1,500** | **$5** |
-| **Yearly Total** | **₨18,000** | **$65** |
+| Domain Renewal | ₨4000 | $5 |
+| **Monthly Total** | **₨7000** | **$25** |
+| **Yearly Total** | **₨132000** | **$480** |
 
-**Annual Savings: ₨156,000 ($559) - 90% cost reduction!**
-
-#### Real Results After Launch (3 Months Data):
-
-| Metric | Before (WordPress) | After (MirchiHut) | Improvement |
-| ------ | ------------------ | ----------------- | ----------- |
-| Page Load Time | 4.8 seconds | 0.9 seconds | **81% faster** |
-| Bounce Rate | 58% | 32% | **45% reduction** |
-| Mobile Orders | 35% | 68% | **94% increase** |
-| Daily Orders | 12-15 | 25-30 | **100% increase** |
-| Customer Complaints | 8-10/week | 1-2/week | **80% reduction** |
+**Annual Savings: ₨132,000 ($480) - 90% cost reduction!**
 
 #### How WhatsApp Integration Changed Their Business:
 
