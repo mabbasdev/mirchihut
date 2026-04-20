@@ -192,7 +192,7 @@ function renderProductCard(item) {
     return `
         <div class="product-card">
             <div class="product-card-image" style="background:linear-gradient(135deg,${color}22 0%,${color}44 100%);">
-                <span>${emoji}</span>
+                <img src="${item.image || `https://via.placeholder.com/400x300/${color.slice(1)}/ffffff?text=${encodeURIComponent(emoji)}`}" alt="${escapeHtml(item.name)}" style="width:100%; height:100%; object-fit:cover;">
                 ${item.popular ? '<span class="popular-badge"><i class="fas fa-fire"></i> POPULAR</span>' : ""}
             </div>
             <div class="product-card-content">
@@ -381,13 +381,14 @@ function openProductModal(item) {
         CATS.find((c) => c.id === item.cat)?.icon || "fas fa-utensils";
     const recommendations = getRecommendations(item);
     const descriptionBullets = getDescriptionBulletPoints(item.desc);
-    const imageUrl = `https://via.placeholder.com/400x300/${color.slice(1)}/ffffff?text=${encodeURIComponent(emoji)}`;
+    const imageUrl = item.image || `https://via.placeholder.com/400x300/${color.slice(1)}/ffffff?text=${encodeURIComponent(emoji)}`;
 
     modalContent.innerHTML = `
         <div class="modal-two-column">
             <div class="modal-left">
-                <div class="modal-product-image" style="background: linear-gradient(135deg, ${color}22 0%, ${color}44 100%); cursor: pointer;" id="modalProductImage">
-                    <span class="modal-product-emoji">${emoji}</span>
+                <div class="modal-product-image" style="background: linear-gradient(135deg, ${color}22 0%, ${color}44 100%); cursor: pointer; position: relative; overflow: hidden;" id="modalProductImage">
+                    <img src="${imageUrl}" alt="${escapeHtml(item.name)}" style="width:100%; height:100%; object-fit:cover; position: absolute; top:0; left:0;">
+                    <span class="modal-product-emoji" style="position: relative; z-index: 1;">${emoji}</span>
                     <div class="image-hint">
                         <i class="fas fa-search-plus"></i> Click to enlarge
                     </div>
