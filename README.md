@@ -13,7 +13,7 @@ MirchiHut is a **fully functional, zero-backend e-commerce website** for a Pakis
 ## 🎯 REAL WORLD USE CASE - Problem & Solution
 
 Click here to see the REAL WORLD USE CASE of this project.
-[Take me there!](https://github.com/mabbasdev/mirchihut)
+[Take me there!](https://github.com/mabbasdev/mirchihut#-real-world-use-case---problem--solution-1)
 
 - - -
 
