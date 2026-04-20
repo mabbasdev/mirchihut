@@ -286,14 +286,13 @@ Before approaching me, the client had a WordPress website built by another devel
 
 | Expense | Cost (PKR) | Cost (USD) |
 | ------- | ---------- | ---------- |
-| Hostinger Premium Hosting | ₨2,500 | $9 |
-| Domain Renewal | ₨1,500 | $5 |
-| WordPress Theme License | ₨2,000 | $7 |
-| Security Plugin (Wordfence) | ₨3,000 | $11 |
-| Cache Plugin (WP Rocket) | ₨4,000 | $15 |
-| Form-to-Email Plugin | ₨1,500 | $5 |
-| **Monthly Total** | **₨14,500** | **$52** |
-| **Yearly Total** | **₨174,000** | **$624** |
+| Hostinger Premium Hosting |  |  |
+| Domain Renewal |  |  |
+| WordPress Theme License |  |  |
+| Security Plugin (Wordfence) |  |  |
+| Cache Plugin (WP Rocket) |  |  |
+| Form-to-Email Plugin |  |  |
+| **Yearly Total** | **₨132,000** | **$480** |
 
 #### Hidden Costs & Pain Points:
 
@@ -326,7 +325,6 @@ I built a **static and functional, WhatsApp-integrated website** that completely
 | ------- | ---------- | ---------- |
 | GitHub Pages Hosting | ₨0 | $0 |
 | Domain Renewal | ₨4000 | $5 |
-| **Monthly Total** | **₨7000** | **$25** |
 | **Yearly Total** | **₨132000** | **$480** |
 
 **Annual Savings: ₨132,000 ($480) - 90% cost reduction!**
